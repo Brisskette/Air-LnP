@@ -2,6 +2,6 @@
 
 <ul>
   <% @lands.each do |land| %>
-  <li><%= land.description %> Created by <%= land.user.email %></li>
+  <li><%= link_to land.description, land_path(land) %> Created by <%= land.user.email %></li>
   <% end %>
 </ul>

@@ -1,0 +1,16 @@
+<%= form_for(@land) do |f| %>
+
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+
+  <%= f.label :address %>
+  <%= f.text_field :address %>
+
+  <%= f.label :price %>
+  <%= f.text_field :price %>
+
+  <%= f.label :surface %>
+  <%= f.text_field :surface %>
+
+  <%= f.submit %>
+<% end %>

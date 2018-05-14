@@ -1,0 +1,15 @@
+<h2>Booking confirmed ! </h2>
+
+<p>Here is the detail of your booking :</p>
+
+<ul>
+  <li>Start Date : <%= @booking.start_date %></li>
+  <li>End Date : <%= @booking.end_date %></li>
+  <li>Price per night : <%= @booking.land.price %> €</li>
+  <li>Total Price : <%= (@booking.land.price * (@booking.end_date - @booking.start_date)).to_i %> €</li>
+  <li>Landlord : <%= @booking.user.email %></li>
+  <li>Address : <%= @booking.land.address %></li>
+
+</ul>
+
+<%= link_to "Back to the list", lands_path %>

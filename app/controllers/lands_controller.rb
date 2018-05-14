@@ -4,4 +4,8 @@ class LandsController < ApplicationController
     @lands = Land.all
   end
 
+  def show
+    @land = Land.find(params[:id])
+  end
+
 end

@@ -1,0 +1,7 @@
+<p> This is the list of all lands</p>
+
+<ul>
+  <% @lands.each do |land| %>
+  <li><%= land.description %> Created by <%= land.user.email %></li>
+  <% end %>
+</ul>

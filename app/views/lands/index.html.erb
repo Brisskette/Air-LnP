@@ -2,6 +2,7 @@
 
 <ul>
   <% @lands.each do |land| %>
-  <li><%= link_to land.description, land_path(land) %> Created by <%= land.user.email %></li>
+  <li><%= link_to land.title, land_path(land) %> Created by <%= land.user.email %></li>
+  <li><%= cl_image_tag land.photo, height: 300, width: 400, crop: :fill %></li>
   <% end %>
 </ul>

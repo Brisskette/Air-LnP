@@ -1,9 +1,11 @@
-<h2> Focus on <%=@land.description %> :</h2>
+<h2> Focus on <%=@land.title %> :</h2>
+<p> Focus on <%=@land.description %> :</p>
 
 
 <ul>
   <li>Surface : <%= @land.surface %> square meters</li>
   <li>Price : <%= @land.price %> € per night</li>
+  <li><%= cl_image_tag @land.photo, height: 300, width: 400, crop: :fill %></li>
 </ul>
 
 

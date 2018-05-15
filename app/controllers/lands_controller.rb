@@ -1,21 +1,24 @@
 class LandsController < ApplicationController
 
   def index
-    @lands = Land.all
+    @lands = policy_scope(Land)
   end
 
   def show
     @land = Land.find(params[:id])
+    authorize @land
   end
 
   def new
     @land = Land.new
+    authorize @land
   end
 
   def create
     # raise
     @land = Land.new(land_params)
-    @land.user_id = current_user.id
+    @land.user = current_user
+    authorize @land
     if @land.save
       redirect_to lands_path
     else
@@ -27,7 +30,7 @@ class LandsController < ApplicationController
   private
 
   def land_params
-    params.require(:land).permit(:description, :address, :price, :surface)
+    params.require(:land).permit(:title,:description, :address, :price, :surface, :photo)
   end
 
 

@@ -19,18 +19,38 @@ class LandsController < ApplicationController
     @land = Land.new(land_params)
     @land.user = current_user
     authorize @land
+
     if @land.save
-      redirect_to lands_path
+      redirect_to land_path(@land)
     else
       render :new
     end
+  end
+
+  def edit
+    @land = Land.find(params[:id])
+    authorize @land
+  end
+
+  def update
+    # raise
+    @land = Land.find(params[:id])
+    authorize @land
+
+    if @land.update(land_params)
+      redirect_to land_path(@land)
+    else
+      render :new
+    end
+
+
   end
 
 
   private
 
   def land_params
-    params.require(:land).permit(:title,:description, :address, :price, :surface, :photo)
+    params.require(:land).permit(:title, :description, :address, :price, :surface, :photo)
   end
 
 

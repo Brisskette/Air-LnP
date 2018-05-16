@@ -1,5 +1,5 @@
-<h2> Focus on <%=@land.title %> :</h2>
-<p> Focus on <%=@land.description %> :</p>
+<h2><%=@land.title %> :</h2>
+<p><%=@land.description %> :</p>
 
 
 <ul>
@@ -10,4 +10,5 @@
 
 
 <%= link_to "Make a reservation for this land", new_land_booking_path(@land) %>
+<%= link_to "Edit the land", edit_land_path %>
 <%= link_to "Back to the list", lands_path %>

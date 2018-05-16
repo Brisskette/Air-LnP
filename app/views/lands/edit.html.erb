@@ -1,0 +1,22 @@
+<%= simple_form_for(@land) do |f| %>
+
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+
+  <%= f.label :address %>
+  <%= f.text_field :address %>
+
+  <%= f.label :price %>
+  <%= f.text_field :price %>
+
+  <%= f.label :surface %>
+  <%= f.text_field :surface %>
+
+  <%= f.input :photo %>
+  <%= f.input :photo_cache, as: :hidden %>
+
+  <%= f.submit %>
+<% end %>

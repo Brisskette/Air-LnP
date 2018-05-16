@@ -1,6 +1,7 @@
 
 <%= simple_form_for [@booking, @review] do |f| %>
-  <%= f.input :content %>
+  <%= f.input :content, as: :text %>
+  <%= f.input :rating, as: :integer%>
   <%= f.submit "add a review", class: "btn btn-primary" %>
 <% end %>
 

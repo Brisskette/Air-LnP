@@ -1,18 +1,19 @@
-<!-- <h2><%=@land.title %> :</h2>
-<p><%=@land.description %> :</p>
 
-
-<ul>
-  <li>Surface : <%= @land.surface %> square meters</li>
-  <li>Price : <%= @land.price %> € per night</li>
-  <li><%= cl_image_tag @land.photo, height: 300, width: 400, crop: :fill %></li>
-
-</ul> -->
 <%= render "lands/shared/card"%>
 
+<h2>Reviews: </h2>
 <ul>
   <% @land.reviews.each do |review| %>
   <li> <%= review.content%></li>
+  <% end %>
+</ul>
+<ul>
+  <% @land.reviews.each do |review| %>
+    <% if review.rating? %>
+   <li> <% review.rating.to_i.times do %>
+  <span> * </span>
+    <% end %> </li>
+  <% end %>
   <% end %>
 
 </ul>
@@ -28,3 +29,4 @@
   <%= link_to "Back to the list", lands_path ,class: "btn btn-Light" %>
 </div>
 </div>
+

@@ -8,15 +8,25 @@
 
 </ul>
 
+<h2>Reviews: </h2>
 <ul>
   <% @land.reviews.each do |review| %>
     <li> <%= review.content%></li>
+  <% end %>
+</ul>
+<ul>
+  <% @land.reviews.each do |review| %>
+    <% if review.rating? %>
+   <li> <% review.rating.to_i.times do %>
+  <span> * </span>
+    <% end %> </li>
+  <% end %>
   <% end %>
 
 </ul>
 
 
-
 <%= link_to "Make a reservation for this land", new_land_booking_path(@land) %>
 <%= link_to "Edit the land", edit_land_path %>
 <%= link_to "Back to the list", lands_path %>
+

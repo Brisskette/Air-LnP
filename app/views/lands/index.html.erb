@@ -1,5 +1,6 @@
 <p> This is the list of all lands</p>
 
+<br>
 <ul>
   <% @lands.each do |land| %>
   <li><%= link_to land.title, land_path(land) %> Created by <%= land.user.email %></li>

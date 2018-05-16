@@ -55,6 +55,12 @@ class LandsController < ApplicationController
 
 
   end
+  def destroy
+    @land = Land.find(params[:id])
+    @land.destroy
+    authorize @land
+    redirect_to lands_path
+  end
 
 
   private

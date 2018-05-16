@@ -1,14 +1,5 @@
 <p> This is the list of all lands</p>
 
-<br>
-<ul>
-  <% @lands.each do |land| %>
-  <li><%= link_to land.title, land_path(land) %> Created by <%= land.user.email %></li>
-  <li><%= cl_image_tag land.photo, height: 300, width: 400, crop: :fill %></li>
-  <% end %>
-</ul>
-
-
 <div
   id="map"
   style="width: 100%;
@@ -25,11 +16,12 @@
   <div class="row">
     <% @lands.each do |land| %>
     <div class="col-xs-12 col-sm-4">
+      <% if land.photo_url %>
       <div class="card">
-        <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
+        <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path land.photo %>');">
             <div class="card-category">Popular</div>
             <div class="card-description"><h2><%= link_to land.title, land_path(land) %></h2></div>
-            <%= cl_image_tag land.photo, height: 300, width: 400, crop: :fill , class: "card-user" %>
+             <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
           </div>
           <div class="card-footer">
             <p><%= land.description %> </p>
@@ -37,9 +29,25 @@
           </div>
           <!-- <a class="card-link" href="#" ></a> -->
       </div>
+      <% else %>
+      <div class="card">
+        <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
+            <div class="card-category">Popular</div>
+            <div class="card-description"><h2><%= link_to land.title, land_path(land) %></h2></div>
+             <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
+          </div>
+          <div class="card-footer">
+            <p><%= land.description %> </p>
+            <p><%= land.price %>€/night</p>
+          </div>
+          <!-- <a class="card-link" href="#" ></a> -->
+      </div>
+      <% end %>
+
     </div>
     <% end %>
   </div>
 </div>
+
 
 

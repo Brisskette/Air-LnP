@@ -1,0 +1,22 @@
+
+<div class="container">
+  <div class="row">
+
+    <div class="col-xs-12 col-sm-offset-3 col-sm-6">
+      <div class="card">
+        <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path @land.photo, crop: :fill%>');"">
+         <div class="card-category"> </div>
+         <div class="card-description"><h2><%= @land.title %></h2></div>
+         <%= cl_image_tag current_user.photo, class: "card-user" %>
+       </div>
+       <div class="card-footer">
+        <p><%= @land.address%> </p>
+        <p><%= @land.description %> </p>
+        <p><%= @land.price %>€/night</p>
+      </div>
+      <!-- <a class="card-link" href="#" ></a> -->
+    </div>
+  </div>
+
+</div>
+</div>

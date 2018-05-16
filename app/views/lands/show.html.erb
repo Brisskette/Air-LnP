@@ -1,22 +1,30 @@
-<h2><%=@land.title %> :</h2>
+<!-- <h2><%=@land.title %> :</h2>
 <p><%=@land.description %> :</p>
 
 
 <ul>
   <li>Surface : <%= @land.surface %> square meters</li>
   <li>Price : <%= @land.price %> € per night</li>
+  <li><%= cl_image_tag @land.photo, height: 300, width: 400, crop: :fill %></li>
 
-</ul>
+</ul> -->
+<%= render "lands/shared/card"%>
 
 <ul>
   <% @land.reviews.each do |review| %>
-    <li> <%= review.content%></li>
+  <li> <%= review.content%></li>
   <% end %>
 
 </ul>
 
 
-
-<%= link_to "Make a reservation for this land", new_land_booking_path(@land) %>
-<%= link_to "Edit the land", edit_land_path %>
-<%= link_to "Back to the list", lands_path %>
+<div class="container">
+  <div class= "col-sm-12 ">
+  <%= link_to "Book this land", new_land_booking_path(@land), class: "btn btn-secondary" %>
+  <%= link_to "Edit the land", edit_land_path, class: "btn btn-dark"%>
+  <%= link_to 'Delete',land_path(@land),
+  method: :delete,
+  data: { confirm: 'Are you sure?' },class: "btn btn-Light" %>
+  <%= link_to "Back to the list", lands_path ,class: "btn btn-Light" %>
+</div>
+</div>

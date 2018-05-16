@@ -2,11 +2,21 @@ class LandsController < ApplicationController
 
   def index
     @lands = policy_scope(Land)
+    @lands_geo = Land.where.not(latitude: nil, longitude: nil)
+
+       @markers = @lands_geo.map do |land|
+         {
+           lat: land.latitude,
+           lng: land.longitude#,
+           # infoWindow: { content: render_to_string(partial: "/flats/map_box", locals: { flat: flat }) }
+         }
+       end
   end
 
   def show
     @land = Land.find(params[:id])
     authorize @land
+
   end
 
   def new

@@ -1,119 +1,127 @@
 <!-- <h1>Pages#home</h1>
 <p>Find me in app/views/pages/home.html.erb</p> -->
+<html>
+  <head>
+    <link rel="stylesheets" href="avatar.scss">
 
-<div class="navbar-wagon">
-  <!-- Logo -->
-  <a href="/" class="navbar-wagon-brand">
-    <img src="images/logo.png" alt="logo">
-  </a>
+  </head>
+  <body>
+    <div class="navbar-wagon">
+      <!-- Logo -->
+      <a href="/" class="navbar-wagon-brand">
+        <img src="images/logo.png" alt="logo">
+      </a>
 
-  <!-- Right Navigation -->
-  <div class="navbar-wagon-right hidden-xs hidden-sm">
+      <!-- Right Navigation -->
+      <div class="navbar-wagon-right hidden-xs hidden-sm">
 
-    <a href="" class="navbar-wagon-item navbar-wagon-link">Host</a>
-    <a href="" class="navbar-wagon-item navbar-wagon-link">Trips</a>
-    <a href="" class="navbar-wagon-item navbar-wagon-link">Messages</a>
+        <a href="" class="navbar-wagon-item navbar-wagon-link">Host</a>
+        <a href="" class="navbar-wagon-item navbar-wagon-link">Trips</a>
+        <a href="" class="navbar-wagon-item navbar-wagon-link">Messages</a>
 
-    <!-- Profile picture with dropdown list -->
-    <div class="navbar-wagon-item">
-      <div class="dropdown">
-        <img src="https://kitt.lewagon.com/placeholder/users/ssaunier" class="avatar dropdown-toggle" id="navbar-wagon-menu" data-toggle="dropdown">
-        <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-          <li><a href="#">Profile</a></li>
-          <li><a href="#">Dashboard</a></li>
-          <li><a href="#">Log Out</a></li>
-        </ul>
+        <!-- Profile picture with dropdown list -->
+        <div class="navbar-wagon-item">
+          <div class="dropdown">
+            <img src="https://kitt.lewagon.com/placeholder/users/ssaunier" class="avatar dropdown-toggle" id="navbar-wagon-menu" data-toggle="dropdown">
+            <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+              <li><a href="#">Profile</a></li>
+              <li><a href="#">Dashboard</a></li>
+              <li><a href="#">Log Out</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dropdown appearing on mobile only -->
+      <div class="navbar-wagon-item hidden-md hidden-lg">
+        <div class="dropdown">
+          <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
+          <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+            <li><a href="#">Host</a></li>
+            <li><a href="#">Trips</a></li>
+            <li><a href="#">Messages</a></li>
+          </ul>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- Dropdown appearing on mobile only -->
-  <div class="navbar-wagon-item hidden-md hidden-lg">
-    <div class="dropdown">
-      <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
-      <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-        <li><a href="#">Host</a></li>
-        <li><a href="#">Trips</a></li>
-        <li><a href="#">Messages</a></li>
-      </ul>
+    <div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://cdn.pixabay.com/photo/2017/05/21/18/07/field-2331906_960_720.jpg');">
+      <div class="banner-content">
+        <h1>AirLnP</h1>
+        <p>Est-ce que tu viens pour les vacances ?</p>
+        <a href="#" class="btn-treehouse">Start now</a>
+      </div>
     </div>
-  </div>
-</div>
 
-<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://cdn.pixabay.com/photo/2017/05/21/18/07/field-2331906_960_720.jpg');">
-  <div class="banner-content">
-    <h1>AirLnP</h1>
-    <p>Est-ce que tu viens pour les vacances ?</p>
-  </div>
-</div>
+    <div class="text-center">
+      <h2>Just for the weekend</h2>
+      <p>Discover new, inspiring places close to home.</p>
+    </div>
 
-<div class="text-center">
-  <h2>Just for the weekend</h2>
-  <p>Discover new, inspiring places close to home.</p>
-</div>
+    <br>
 
-<br>
-
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-sm-3">
-      <!-- insert <div class="card"> -->
-        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
-          <div class="card-description">
-            <h2>Stationnement</h2>
-            <p>Very cool city, the best</p>
-          </div>
-          <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
-          <a class="card-link" href="#" ></a>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-3">
+          <!-- insert <div class="card"> -->
+            <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
+              <div class="card-description">
+                <h2>Stationnement</h2>
+                <p>Very cool city, the best</p>
+              </div>
+              <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
+              <a class="card-link" href="#" ></a>
+            </div>
         </div>
-    </div>
-    <div class="col-xs-12 col-sm-3">
-      <!-- insert <div class="card"> -->
-        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
-          <div class="card-description">
-            <h2>Evenement</h2>
-            <p>Very cool city, the best</p>
-          </div>
-          <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
-          <a class="card-link" href="#" ></a>
+        <div class="col-xs-12 col-sm-3">
+          <!-- insert <div class="card"> -->
+            <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
+              <div class="card-description">
+                <h2>Evenement</h2>
+                <p>Very cool city, the best</p>
+              </div>
+              <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
+              <a class="card-link" href="#" ></a>
+            </div>
         </div>
-    </div>
-    <div class="col-xs-12 col-sm-3">
-      <!-- insert <div class="card"> -->
-        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
-          <div class="card-description">
-            <h2>Jardinage</h2>
-            <p>Very cool city, the best</p>
-          </div>
-          <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
-          <a class="card-link" href="#" ></a>
+        <div class="col-xs-12 col-sm-3">
+          <!-- insert <div class="card"> -->
+            <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
+              <div class="card-description">
+                <h2>Jardinage</h2>
+                <p>Very cool city, the best</p>
+              </div>
+              <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
+              <a class="card-link" href="#" ></a>
+            </div>
         </div>
-    </div>
-    <div class="col-xs-12 col-sm-3">
-      <!-- insert <div class="card"> -->
-        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
-          <div class="card-description">
-            <h2>Stockage</h2>
-            <p>Very cool city, the best</p>
-          </div>
-          <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
-          <a class="card-link" href="#" ></a>
+        <div class="col-xs-12 col-sm-3">
+          <!-- insert <div class="card"> -->
+            <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
+              <div class="card-description">
+                <h2>Stockage</h2>
+                <p>Very cool city, the best</p>
+              </div>
+              <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
+              <a class="card-link" href="#" ></a>
+            </div>
         </div>
+      </div>
     </div>
-  </div>
-</div>
 
-<a href="#" class="btn-treehouse">Start now</a>
+    <a href="#" class="btn-treehouse">Start now</a>
 
-<div class="footer">
-  <div class="footer-links">
-    <a href="#"><i class="fa fa-github"></i></a>
-    <a href="#"><i class="fa fa-instagram"></i></a>
-    <a href="#"><i class="fa fa-facebook"></i></a>
-    <a href="#"><i class="fa fa-twitter"></i></a>
-    <a href="#"><i class="fa fa-linkedin"></i></a>
-  </div>
-  <div class="footer-copyright">
-    This footer is made with <i class="fa fa-heart"></i> at Le Wagon
-  </div>
-</div>
+    <div class="footer">
+      <div class="footer-links">
+        <a href="#"><i class="fa fa-github"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-linkedin"></i></a>
+      </div>
+      <div class="footer-copyright">
+        This footer is made with <i class="fa fa-heart"></i> at Le Wagon
+      </div>
+    </div>
+  </body>
+</html>

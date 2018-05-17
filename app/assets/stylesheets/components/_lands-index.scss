@@ -1,0 +1,17 @@
+.main-container {
+  display: flex;
+}
+
+
+.card-container {
+  // flex: auto;
+  top: 0 !important;
+}
+
+.map-container {
+  flex: 0 0 450px;
+  height: 100vh;
+  position: sticky !important; /* !important to override Gmaps inline CSS */
+  top: 0 !important;
+}
+

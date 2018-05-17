@@ -65,8 +65,8 @@ class LandsController < ApplicationController
   end
   def destroy
     @land = Land.find(params[:id])
-    @land.destroy
     authorize @land
+    @land.destroy
     redirect_to lands_path
   end
 

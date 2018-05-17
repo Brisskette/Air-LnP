@@ -1,30 +1,38 @@
 class LandsController < ApplicationController
 
   def index
-    @lands = policy_scope(Land)
+
+    if params[:query].present?
+      @lands = policy_scope(Land.search_by_title_and_address(params[:query]))
+      # @lands_geo = Land.search_by_title_and_address(params[:query]).where.not(latitude: nil, longitude: nil)
+      @lands_geo = @lands.where.not(latitude: nil, longitude: nil)
+    else
+      @lands = policy_scope(Land)
+    # raise
     @lands_geo = Land.where.not(latitude: nil, longitude: nil)
+    end
 
-       @markers = @lands_geo.map do |land|
-         {
-           lat: land.latitude,
-           lng: land.longitude#,
-           # infoWindow: { content: render_to_string(partial: "/flats/map_box", locals: { flat: flat }) }
-         }
-       end
+    @markers = @lands_geo.map do |land|
+     {
+       lat: land.latitude,
+             lng: land.longitude#,
+             # infoWindow: { content: render_to_string(partial: "/flats/map_box", locals: { flat: flat }) }
+           }
+         end
   end
 
-  def show
-    @land = Land.find(params[:id])
-    authorize @land
+     def show
+      @land = Land.find(params[:id])
+      authorize @land
 
-  end
+    end
 
-  def new
-    @land = Land.new
-    authorize @land
-  end
+    def new
+      @land = Land.new
+      authorize @land
+    end
 
-  def create
+    def create
     # raise
     @land = Land.new(land_params)
     @land.user = current_user

@@ -1,5 +1,14 @@
 <p> This is the list of all lands</p>
 
+<%= form_tag lands_path, method: :get do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Find a land"
+  %>
+<% end %>
+
+
 <div
   id="map"
   style="width: 100%;
@@ -7,7 +16,8 @@
   data-markers="<%= @markers.to_json %>"
 ></div>
 
-<br>
+
+
 
 <a href="lands/new" class="btn-treehouse">Add a new piscine</a>
 

@@ -4,31 +4,31 @@
 <div class="view-show"</div>
   <div class="col-xs-12 col-sm-offset-3 col-sm-6">
     <div class="card">
-        <div class="review"><h4>Reviews </h4>
-          <ul>
-            <% @land.reviews.each do |review| %>
-            <li>
-              <%= "'"%>  <%= review.content%>   <%="'"%> <%= "🌲" * review.rating%>
-            </li>
-            <% end %>
+      <div class="review"><h4>Reviews </h4>
+        <ul>
+          <% @land.reviews.each do |review| %>
+          <li>
+            <%= "'"%>  <%= review.content%>   <%="'"%> <%= "🌲" * review.rating%>
           </li>
-        </ul>
-        <!--     </div> -->
-      </div>
-
-        <div class="bouton">
-          <div class= "col-sm-12 ">
-             <%= link_to "Back to the list", lands_path ,class: "btn btn-Light" %>
-            <%= link_to "Edit the land", edit_land_path, class: "btn btn-dark"%>
-            <%= link_to 'Delete',land_path(@land),
-            method: :delete,
-            data: { confirm: 'Are you sure?' },class: "btn btn-Light" %>
-             <%= link_to "Book this land", new_land_booking_path(@land), class: "btn btn-primary" %>
-          </div>
-      </div>
+          <% end %>
+        </li>
+      </ul>
+      <!--     </div> -->
     </div>
 
-<div class="map-container">
+    <div class="bouton">
+      <div class= "col-sm-12 ">
+       <%= link_to "Back to the list", lands_path ,class: "btn btn-Light" %>
+       <%= link_to "Edit the land", edit_land_path, class: "btn btn-dark"%>
+       <%= link_to 'Delete',land_path(@land),
+       method: :delete,
+       data: { confirm: 'Are you sure?' },class: "btn btn-Light" %>
+       <%= link_to "Book this land", new_land_booking_path(@land), class: "btn btn-primary" %>
+     </div>
+   </div>
+ </div>
+
+ <div class="map-container">
   <div
   id="map"
   style="width: 100%;

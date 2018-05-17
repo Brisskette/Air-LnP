@@ -21,11 +21,19 @@ class LandsController < ApplicationController
          end
   end
 
-     def show
-      @land = Land.find(params[:id])
-      authorize @land
+   def show
+    @land = Land.find(params[:id])
+    authorize @land
+    # @land_geo = @land.where.not(latitude: nil, longitude: nil)
+    @markers = [
+     {
+       lat: @land.latitude,
+             lng: @land.longitude#,
+             # infoWindow: { content: render_to_string(partial: "/flats/map_box", locals: { flat: flat }) }
+           }]
+# raise
 
-    end
+  end
 
     def new
       @land = Land.new

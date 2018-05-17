@@ -1,32 +1,31 @@
 
 <%= render "lands/shared/card"%>
 
-<h2>Reviews: </h2>
-<ul>
-  <% @land.reviews.each do |review| %>
-  <li> <%= review.content%></li>
-  <% end %>
-</ul>
-<ul>
-  <% @land.reviews.each do |review| %>
-    <% if review.rating? %>
-   <li> <% review.rating.to_i.times do %>
-  <span> * </span>
-    <% end %> </li>
-  <% end %>
-  <% end %>
+<div class="view-show"</div>
+  <div class="col-xs-12 col-sm-offset-3 col-sm-6">
+    <div class="card">
+        <div class="review"><h4>Reviews </h4>
+          <ul>
+            <% @land.reviews.each do |review| %>
+            <li>
+              <%= "'"%>  <%= review.content%>   <%="'"%> <%= "🌲" * review.rating%>
+            </li>
+            <% end %>
+          </li>
+        </ul>
+        <!--     </div> -->
+      </div>
 
-</ul>
+        <div class="bouton">
+          <div class= "col-sm-12 ">
+             <%= link_to "Back to the list", lands_path ,class: "btn btn-Light" %>
+            <%= link_to "Edit the land", edit_land_path, class: "btn btn-dark"%>
+            <%= link_to 'Delete',land_path(@land),
+            method: :delete,
+            data: { confirm: 'Are you sure?' },class: "btn btn-Light" %>
+             <%= link_to "Book this land", new_land_booking_path(@land), class: "btn btn-primary" %>
+          </div>
+      </div>
+    </div>
 
-
-<div class="container">
-  <div class= "col-sm-12 ">
-  <%= link_to "Book this land", new_land_booking_path(@land), class: "btn btn-secondary" %>
-  <%= link_to "Edit the land", edit_land_path, class: "btn btn-dark"%>
-  <%= link_to 'Delete',land_path(@land),
-  method: :delete,
-  data: { confirm: 'Are you sure?' },class: "btn btn-Light" %>
-  <%= link_to "Back to the list", lands_path ,class: "btn btn-Light" %>
-</div>
-</div>
 

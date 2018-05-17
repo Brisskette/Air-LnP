@@ -3,21 +3,32 @@
   <a href="/" class="navbar-wagon-brand">
     <img src="https://theultralinx.com/.image/c_limit%2Ccs_srgb%2Cq_auto:good%2Cw_700/MTI5MDIyOTc3NjcyMDA1NjQy/19.webp" alt="logo">
   </a>
+  <!-- Barre centrale  -->
+    <div class="search-bar">
+      <%= form_tag lands_path, method: :get do %>
+        <%= text_field_tag :query,
+        params[:query],
+        class: "form-control",
+          placeholder: "Find a land"
+          %>
+      <% end %>
+    </div>
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
     <a href="bookings" class="navbar-wagon-item navbar-wagon-link">Bookings</a>
-
     <% if user_signed_in? %>
 
       <%= link_to('Logout', destroy_user_session_path, method: :delete)%> </div>
       <%= link_to('Profile', edit_user_registration_path, method: :get)%>
-
-
     <% else %>
 
     <%= link_to('Login', new_user_session_path)%>
 
     <% end %>
+
+
+    <a href="lands/new" class="btn btn-treehouse btn-sm">Add a new land</a>
+    <!-- Profile picture with dropdown list -->
 
     <div class="navbar-wagon-item">
     <div class="dropdown">

@@ -39,7 +39,7 @@ class LandsController < ApplicationController
       lat: @land.latitude,
       lng: @land.longitude,
       title: @land.title,
-      label: "#{@land.price}",
+      label: "#{@land.price}€",
              #,
              # infoWindow: { content: render_to_string(partial: "/flats/map_box", locals: { flat: flat }) }
      }]

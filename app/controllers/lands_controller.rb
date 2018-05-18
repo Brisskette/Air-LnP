@@ -17,13 +17,12 @@ class LandsController < ApplicationController
        lat: land.latitude,
        lng: land.longitude,
        title: land.title,
-       label: "#{land.price}",
+       label: "#{land.price}€",
        id: land.id,
        #,
        # infoWindow: { content: render_to_string(partial: "/flats/map_box", locals: { flat: flat }) }
      }
     end
-
   end
 
 
@@ -40,12 +39,15 @@ class LandsController < ApplicationController
       lat: @land.latitude,
       lng: @land.longitude,
       title: @land.title,
-      label: "#{@land.price}",
+      label: "#{@land.price}€",
              #,
              # infoWindow: { content: render_to_string(partial: "/flats/map_box", locals: { flat: flat }) }
-           }]
-# raise
-
+     }]
+     sum = 0
+     @land.reviews.each do |review|
+      sum = sum + review.rating
+     end
+     @moyenne = sum / (@land.reviews.length)
   end
 
     def new

@@ -7,9 +7,12 @@
           <% if land.photo_url %>
           <div class="card">
             <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path land.photo %>');">
-              <div class="card-category">Popular</div>
               <div class="card-description"><h2><%= link_to land.title, land_path(land) %></h2></div>
-              <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
+              <% if land.user.photo_url %>
+                <%= cl_image_tag land.user.photo_url, class: "card-user" %>
+              <% else %>
+               <%= image_tag "logo_airlnp.png", alt:"logo", class:"card-user"%>
+               <% end %>
             </div>
             <div class="card-footer">
               <p><%= land.description %> </p>
@@ -22,7 +25,7 @@
             <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
               <div class="card-category">Popular</div>
               <div class="card-description"><h2><%= link_to land.title, land_path(land) %></h2></div>
-              <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
+              <%= image_tag "logo_airlnp.png", alt:"logo", class:"card-user"%>
             </div>
             <div class="card-footer">
               <p><%= land.description %> </p>

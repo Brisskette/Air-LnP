@@ -18,7 +18,8 @@
        <% else %>
           <ul>
             <% @land.reviews.each do |review| %>
-            <li><%= "'"%>  <%= review.content%>   <%="'"%> <%= "🌲" * review.rating%></li>
+            <li> <em> <%= review.booking.user.first_name %><em>  <%= ":"%>
+ <%= "'"%>  <%= review.content%>   <%="'"%> <%= "🌲" * review.rating%></li>
             <% end %>
             <% end %>
           </ul>

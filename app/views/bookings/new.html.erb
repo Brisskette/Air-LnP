@@ -1,10 +1,8 @@
-<%= simple_form_for [@land, @booking] do |f| %>
+<%=  simple_form_for [@land, @booking] do |f| %>
 
- <%= f.label :start_date %>
- <%= f.text_field :start_date %>
-
- <%= f.label :end_date %>
- <%= f.text_field :end_date %>
-
- <%= f.submit %>
+  <label class="date optional" for="booking_start_date">Start date</label>
+  <input type="date" id="booking_start_date" name="booking[start_date]">
+  <label class="date optional" for="booking_end_date">End date</label>
+  <input type="date" id="booking_end_date" name="booking[end_date]">
+  <%= f.submit %>
 <% end %>

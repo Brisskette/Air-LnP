@@ -14,10 +14,12 @@
          <!-- <a class="card-link" href="#" ></a> -->
        </div>
       <div class="review">
-        <h4>Reviews </h4>
+         <% if @land.reviews.blank? %> Be the first to leave a review
+       <% else %>
           <ul>
             <% @land.reviews.each do |review| %>
             <li><%= "'"%>  <%= review.content%>   <%="'"%> <%= "🌲" * review.rating%></li>
+            <% end %>
             <% end %>
           </ul>
       </div>

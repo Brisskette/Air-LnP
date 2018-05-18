@@ -15,11 +15,21 @@ class LandsController < ApplicationController
     @markers = @lands_geo.map do |land|
      {
        lat: land.latitude,
-             lng: land.longitude#,
-             # infoWindow: { content: render_to_string(partial: "/flats/map_box", locals: { flat: flat }) }
-           }
-         end
+       lng: land.longitude,
+       title: land.title,
+       label: "#{land.price}",
+       id: land.id,
+       #,
+       # infoWindow: { content: render_to_string(partial: "/flats/map_box", locals: { flat: flat }) }
+     }
+    end
+
   end
+
+
+
+
+
 
    def show
     @land = Land.find(params[:id])
@@ -27,8 +37,11 @@ class LandsController < ApplicationController
     # @land_geo = @land.where.not(latitude: nil, longitude: nil)
     @markers = [
      {
-       lat: @land.latitude,
-             lng: @land.longitude#,
+      lat: @land.latitude,
+      lng: @land.longitude,
+      title: @land.title,
+      label: "#{@land.price}",
+             #,
              # infoWindow: { content: render_to_string(partial: "/flats/map_box", locals: { flat: flat }) }
            }]
 # raise

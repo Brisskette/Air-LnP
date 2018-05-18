@@ -1,8 +1,16 @@
 
-<%= simple_form_for [@booking, @review] do |f| %>
-  <%= f.input :content, as: :text %>
-  <%= f.input :rating, as: :integer%>
-  <%= f.submit "add a review", class: "btn btn-primary" %>
-<% end %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-4 col-sm-offset-4 ">
+      <%= simple_form_for [@booking, @review] do |f| %>
+
+      <%= f.input :content, as: :text, placeholder: 'Your comment', input_html:{class:'my_input'}%>
+      <%= f.input :rating, as: :integer, placeholder: '0-5', input_html:{class:'my_input'}%>
+      <%= f.button :button, "Add a review", type: :submit, class: :'btn btn-treehouse btn-sm' %>
+      <% end %>
+    </div>
+  </div>
+</div>
 
 

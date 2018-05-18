@@ -47,7 +47,12 @@ class LandsController < ApplicationController
      @land.reviews.each do |review|
       sum = sum + review.rating
      end
-     @moyenne = sum / (@land.reviews.length)
+     if @land.reviews.length > 0
+      @moyenne = " Average rating: #{sum / (@land.reviews.length)}/5"
+    else
+      @moyenne = "Waiting for rating"
+    end
+
   end
 
     def new

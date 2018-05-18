@@ -33,12 +33,15 @@
        data-markers="<%= @markers.to_json %>"
        ></div>
        <div class="bouton-show">
+
           <%= link_to "Back to the list", lands_path ,class: "btn btn-medium" %>
-          <%= link_to "Edit the land", edit_land_path, class: "btn btn-medium"%>
+          <% if @land.user == current_user %>
+          <%=link_to "Edit the land", edit_land_path, class: "btn btn-medium"%>
+
           <%= link_to 'Delete',land_path(@land),
           method: :delete,
           data: { confirm: 'Are you sure?' },class: "btn btn-medium" %>
-
+          <%end %>
           <%= link_to "Book this land", new_land_booking_path(@land), class: "btn btn-treehouse" %>
         </div>
       </div>

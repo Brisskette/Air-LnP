@@ -1,5 +1,6 @@
   <div class="main-container">
     <div class="review-container">
+
          <div class="card-show">
            <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path @land.photo, crop: :fill%>');"">
             <div class="card-category"> Average Rating: <%= @moyenne %> / 5</div>
@@ -13,20 +14,23 @@
            <p><%= @land.price %>€/night</p>
          </div>
          <!-- <a class="card-link" href="#" ></a> -->
-       </div>
+      </div>
       <div class="review">
-         <% if @land.reviews.blank? %> Be the first to leave a review
-       <% else %>
+        <div class="card-review">
+          <% if @land.reviews.blank? %> Be the first to leave a review
+          <% else %>
           <ul>
             <% @land.reviews.each do |review| %>
             <li> <em> <%= review.booking.user.first_name %><em>  <%= ":"%>
  <%= "'"%>  <%= review.content%>   <%="'"%> <%= "🌲" * review.rating%></li>
             <% end %>
-            <% end %>
+          <% end %>
           </ul>
+        </div>
       </div>
     </div>
     <div class="mapandbtn">
+
 
        <div
        id="map"
@@ -49,7 +53,6 @@
       </div>
     </div>
    </div>
-
 
 
 

@@ -26,3 +26,10 @@
   text-decoration: none;
   color: white;
 }
+
+.btn-show {
+  display: flex;
+  min-width: 100%;
+  justify-content: space-around;
+  padding: 15px;
+}

@@ -2,9 +2,10 @@
     <div class="review-container">
          <div class="card-show">
            <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path @land.photo, crop: :fill%>');"">
-            <div class="card-category"> </div>
+            <div class="card-category"> Average Rating: <%= @moyenne %> / 5</div>
             <div class="card-description"><h2><%= @land.title %></h2></div>
             <%= cl_image_tag @land.user.photo_url, class: "card-user" %>
+
           </div>
           <div class="card-footer">
            <p><%= @land.address%> </p>
@@ -44,5 +45,7 @@
       </div>
     </div>
    </div>
+
+
 
 

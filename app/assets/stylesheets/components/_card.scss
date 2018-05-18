@@ -74,3 +74,20 @@
   z-index: 300;
 }
 
+.card-booking {
+  display: flex;
+  background-color: white;
+  border-radius: 1px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+  padding: 30px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  border-bottom:1px solid rgba(77, 75, 78, 0.3);
+  color: rgba(77, 75, 78, 1);
+}

@@ -45,7 +45,7 @@ class LandsController < ApplicationController
              # infoWindow: { content: render_to_string(partial: "/flats/map_box", locals: { flat: flat }) }
            }]
 # raise
-
+    # @booking = Booking.where(user: current_user, land: @land)
   end
 
     def new

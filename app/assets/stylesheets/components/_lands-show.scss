@@ -15,15 +15,16 @@
 
 
 .review-container {
-  float :right;
+
   flex: auto;
   top: 0 !important;
-  width: 60vh !important;
+  width: 80vh !important;
 }
 
 
 .mapandbtn {
-  flex: 0 0 450px;
+  padding-left: 30px;
+  margin:10px;
   height: 100vh;
   position: sticky !important; /* !important to override Gmaps inline CSS */
   top: 0 !important;
@@ -31,16 +32,6 @@
   min-width: 50vw;
 }
 
-.card-show {
-
-      flex: 1 1 auto;
-      margin: 10px;
-      border-radius: 1px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-      transition: all 0.3s ease;
-      width: 600px;
-
-}
 
 .bouton-show {
   margin-top: 30px;

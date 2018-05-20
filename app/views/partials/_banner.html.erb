@@ -1,17 +1,55 @@
-<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('http://www.phototeam-nature.com/wp-content/uploads/2015/04/COUV-Islande-85-6.jpg');">
-  <div class="banner-content">
-    <h1>AirLnP</h1>
 
-    <div></div>
+<!--  style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('http://www.phototeam-nature.com/wp-content/uploads/2015/04/COUV-Islande-85-6.jpg');"> -->
 
-    <br>
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <div class="banner">
+    <ol class="carousel-indicators">
+      <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    </ol>
 
-   <div class="col-xs-12 col-sm-offset-2 col-sm-8">
-    <p>Trouver votre terrain pour un potager, un evenement, un stantionnement ou bien camper!</p>
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img class="img-responsive" <%= image_tag "banner_mariage.jpg"%>>
+        <div class="carousel-caption">
+         <h1>AirLnP</h1>
+         <p>Trouver votre terrain un evenement</p>
+        </div>
+     </div>
+     <div class="item">
+      <img class="img-responsive" <%= image_tag "banner_potager.jpg"%>>
+       <div class="carousel-caption">
+         <h1>AirLnP</h1>
+         <p>Trouver votre terrain faire un potager</p>
+       </div>
     </div>
-    <div class="col-xs-12 col-sm-offset-2 col-sm-8">
+    <div class="item">
+      <img class="img-responsive" <%= image_tag "banner_camping.jpg"%>>
+      <div class="carousel-caption">
+         <h1>AirLnP</h1>
+         <p>Trouver votre terrain camper</p>
+       </div>
+    </div>
+    <!-- </div> -->
+   <!--  <div class="col-xs-12 col-sm-offset-2 col-sm-8">
+      <p>Trouver votre terrain pour un potager, un evenement, un stantionnement ou bien camper!</p>
+    --> <!-- </div> -->
+
+  </div>
+
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Précédent</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Suivant</span>
+  </a>
+</div>
+   <div class="col-xs-12 col-sm-offset-3 col-sm-6">
       <a href="/lands" class="btn-treehouse btn-sm">Trouver un terrain !</a>
       <a href="lands/new" class="btn-treehouse btn-sm"">Louer votre terrain </a>
     </div>
-  </div>
+</div>
 </div>

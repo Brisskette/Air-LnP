@@ -1,28 +1,38 @@
+<div class="container">
 
-
-
-    <div class="col-xs-12 col-sm-6 col-sm-offset-3 ">
-<br>
-<br>
-<br>
-      <%=  simple_form_for [@land, @booking] do |f| %>
+  <div class="col-xs-12 col-sm-6 col-sm-offset-3 ">
+    <br>
+    <br>
+    <br>
+    <%=  simple_form_for [@land, @booking] do |f| %>
 
     <div >
-        <label class="date optional" for="booking_start_date">Date de début</label>
-     </div>
-   <div >
-        <input type="date" id="booking_start_date" name="booking[start_date]">
-      </div>
-      <br>
-     <div >
-        <label class="date optional" for="booking_end_date">Date de fin</label>
-      </div>
-      <div>
-        <input type="date" id="booking_end_date" name="booking[end_date]">
-      </div>
-      <br>
-     <div> <%= f.button :button, "RESERVER", type: :submit, class: :'btn btn-treehouse btn-sm' %></div>
-      <% end %>
+      <label class="date optional" for="booking_start_date">Date de début</label>
     </div>
+    <div >
+      <input type="date" id="booking_start_date" name="booking[start_date]">
+    </div>
+    <br>
+    <div >
+      <label class="date optional" for="booking_end_date">Date de fin</label>
+    </div>
+    <div>
+      <input type="date" id="booking_end_date" name="booking[end_date]">
+    </div>
+    <br>
+    <div> <%= f.button :button, "RESERVER", type: :submit, class: :'btn btn-treehouse btn-sm' %>
+    </div>
+    <% end %>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+  </div>
+</div>
 
 

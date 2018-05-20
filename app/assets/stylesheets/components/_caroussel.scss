@@ -1,0 +1,19 @@
+.carousel-inner {
+
+  padding-bottom: 120px;
+  color: white;
+  text-align: center;
+  height: calc(100vh - 90px);
+  /* if you have a 70px navbar => height: calc(100vh - 70px); */
+  background-size: cover !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+
+.carousel-caption {
+
+  padding-bottom: 200px;
+}

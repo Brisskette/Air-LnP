@@ -1,13 +1,13 @@
 .footer {
   background: #FEFEFE;
-  position: absolute;
-  bottom: 0;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 20px;
   padding: 0px 20px;
   color: rgba(0,0,0,0.3);
+   font-size: 16px;
 
 
 
@@ -20,12 +20,10 @@
   color: black;
   opacity: 0.15;
   text-decoration: none;
-  font-size: 24px;
+  font-size: 16px;
   padding: 0px 10px;
 }
 .footer-links a:hover {
   opacity: 1;
 }
-.footer .fa-heart {
-  color: #D23333;
-}
+

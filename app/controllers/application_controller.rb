@@ -16,11 +16,11 @@ class ApplicationController < ActionController::Base
    #   redirect_to(root_path)
    def configure_permitted_parameters
 
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:first_name, :last_name])
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:first_name, :last_name, :photo, :photo_cache])
 
     # For additional in app/views/devise/registrations/edit.html.erb
     devise_parameter_sanitizer.permit(:account_update, keys: [:first_name, :last_name, :address, :photo, :phone_number])
-    devise_parameter_sanitizer.permit(:account_edit, keys: [:first_name, :last_name, :address, :photo, :phone_number])
+
 
   end
 
